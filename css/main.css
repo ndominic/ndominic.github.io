@@ -1,0 +1,33 @@
+#nav {
+  background-color: #0066CC;
+  height: 200px;
+  width: 100%;
+  position: fixed;
+}
+
+#nav #logo {
+  float:left;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+#nav #navbar {
+  float: right;
+}
+
+#nav #navbar li {
+  display: inline;
+}
+
+#nav #navbar a {
+  color: #5a5a5a;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 12px;
+}
+  
+  
+  
+  
