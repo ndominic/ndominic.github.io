@@ -1,19 +1,26 @@
 #nav {
   background-color: #0066CC;
-  height: 200px;
+  margin-top: 0px;
+  height: 75px;
   width: 100%;
   position: fixed;
 }
 
-#nav #logo {
+#nav .container {
+  margin-top: 25px;
+}
+
+#nav #logo a {
   float:left;
   color: white;
   font-weight: bold;
   text-decoration: none;
+  font-size: 25px;
 }
 
 #nav #navbar {
   float: right;
+  margin-right: 50px;
 }
 
 #nav #navbar li {
@@ -25,7 +32,7 @@
   text-decoration: none;
   text-transform: uppercase;
   font-weight: bold;
-  font-size: 12px;
+  font-size: 18px;
 }
   
   
