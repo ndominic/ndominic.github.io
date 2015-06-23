@@ -1,17 +1,14 @@
-#nav {
+.nav {
   background-color: #0066CC;
-  margin-top: 0px;
-  height: 75px;
-  width: 100%;
   position: fixed;
 }
 
-#nav .container {
+.nav .container {
   position: relative;
-  margin-top: 25px;
+  top: 25px;
 }
 
-#nav #logo a {
+.nav .logo a {
   float:left;
   margin-left: 50px;
   color: white;
@@ -22,18 +19,18 @@
   display: inline;
 }
 
-#nav #navbar {
+.nav .navbar {
   float: right;
   margin-right: 50px;
   display: inline;
 }
 
-#nav #navbar li {
+.nav .navbar li {
   display: inline;
   margin-right: 50px;
 }
 
-#nav #navbar a {
+.nav .navbar a {
   color: #666699;
   text-decoration: none;
   text-transform: uppercase;
