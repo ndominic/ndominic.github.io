@@ -1,0 +1,280 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<link href='https://fonts.googleapis.com/css?family=Arimo:400,400italic' rel='stylesheet' type='text/css'>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<link href="css/thishouse.css" rel="stylesheet"/>
+	<title>Debate Case Generator</title>
+</head>
+
+<body>
+
+	<div id="case">
+		<span id="statement">
+			This house believes that...
+		</span>
+	</div>
+
+	<br>
+	<br>
+
+	<div id="generate">
+		<span id="button">
+			Make a case
+		</span>
+	</div>
+
+	<script>
+
+	$("#button").click(function() {
+		createCase;
+	})
+
+	function createCase() {
+		var startcase;
+		var endcase; 
+		var type = Math.random() * 5;
+		var mod = Math.random() * 5;
+
+		if(type <= 3)
+			startcase = standardCase();
+		/*else if (type <=  4) 
+			startcase = opChoice();*/
+		else 
+			startcase = normativeCase();
+
+		if(mod <= 1)
+			endcase = timeSpace().concat(startcase);
+		else if (mod <= 2)
+			endcase = startcase.concat(caveat());
+
+		document.getElementById(statement).innerHTML = endcase;
+	}
+
+	function standardCase() {
+		var thiscase;
+		var opChoice = Math.random() * 5;
+		var actor = actors[Math.floor(Math.random() * actors.length)];
+		var verb = verbs[Math.floor(Math.random() * verbs.length)];
+		var subject = subjects[Math.floor(Math.random() * subjects.length)];
+
+		if(opChoice <= 1) {
+			thiscase = "Op choice: This house believes that " + String(actor) + " should " + String(verb) + " " + String(subject);
+		}
+		else {
+			thiscase = "This house believes that " + String(actor) + " should " + String(verb) + " " + String(subject);
+		}
+
+		return thiscase;
+	}
+
+	function normativeCase() {
+		var thiscase;
+		var opChoice = Math.random() * 5;
+		var verb = verbs[Math.floor(Math.random() * verbs.length)];
+		var subject = subjects[Math.floor(Math.random() * subjects.length)];
+
+		if(opChoice <= 1) {
+			thiscase = "Op choice: Normatively speaking, we should " + String(verb)
+				+ " " + String(subject);
+		}
+		else {
+			thiscase = "Normatively speaking, we should " + String(verb)
+				+ " " + String(subject);
+		}
+
+		return thiscase;
+	}
+
+	function timeSpace() {
+		var timestatement;
+		var setting = settings[Math.floor(Math.random() * settings.length)];
+
+		timestatement = "This is a time-space case set " + String(setting) + ".";
+
+		return timestatement;
+	}
+
+	function caveat() {
+		var thiscaveat;
+		var randomcaveat = caveats[Math.floor(Math.random() * caveats.length)];
+
+		thiscaveat = "Caveat: " + String(randomcaveat) + ".";
+
+		return thiscaveat;
+	}
+
+var actors = {
+	"The Federal Reserve",
+	"the embodiment of the American people",
+	"lawyers",
+	"doctors",
+	"university professors",
+	"university students",
+	"APDA",
+	"the American government",
+	"America",
+	"the NYPD",
+	"the European Union",
+	"college students",
+	"Congress",
+	"children",
+	"Wikipedia",
+	"Facebook",
+	"Google",
+	"Europeans",
+	"Americans",
+	"the British government",
+	"the French government",
+	"ISIS",
+	"NATO",
+	"the Chinese government",
+	"the Russian government",
+	"the UN",
+	"the feminist movement",
+	"the LGBTQ rights movement",
+	"President Obama",
+	"Hillary Clinton",
+	"Donald Trump",
+	"Bernie Sanders",
+	"Angela Merkel",
+	"Narendra Modi",
+	"Vladimir Putin",
+	"David Cameron",
+	"Xi Jinping",
+	"Francois Hollande",
+	"we",
+	"people",
+	"I",
+}
+
+var subjects = {
+	"The Federal Reserve",
+	"the embodiment of the American people",
+	"lawyers",
+	"doctors",
+	"university professors",
+	"university students",
+	"APDA",
+	"the American government",
+	"America",
+	"the NYPD",
+	"the European Union",
+	"college students",
+	"Congress",
+	"children",
+	"Wikipedia",
+	"Facebook",
+	"Google",
+	"Europeans",
+	"Americans",
+	"the British government",
+	"the French government",
+	"ISIS",
+	"NATO",
+	"the Chinese government",
+	"the Russian government",
+	"the UN",
+	"the feminist movement",
+	"the LGBTQ rights movement",
+	"President Obama",
+	"Hillary Clinton",
+	"Donald Trump",
+	"Bernie Sanders",
+	"Angela Merkel",
+	"Narendra Modi",
+	"Vladimir Putin",
+	"David Cameron",
+	"Xi Jinping",
+	"Francois Hollande",
+	"the Internet",
+	"stem cells",
+	"universities",
+	"high schools",
+	"the Eurozone",
+	"the euro",
+	"medical research",
+	"artificial intelligence research",
+	"the Constitution",
+	"babies",
+	"children",
+	"bankers",
+	"marijuana",
+	"all drugs",
+	"some drugs",
+	"drugs, occasionally",
+	"the War on Crime",
+	"the War on Terror",
+	"the War on Drugs",
+	"celebrities",
+	"academics",
+	"the use of drone strikes",
+	"the Death Star",
+	"gun control laws",
+	"abortion",
+
+}
+
+var verbs = {
+	"wholheartedly support",
+	"ban", 
+	"kill", 
+	"get rid of", 
+	"raise interest rates on",
+	"loser interest rates on", 
+	"tax",
+	"destroy", 
+	"legalize",
+	"lift arrest warrants on",
+	"stop using",
+	"prevent",
+	"eliminate",
+	"tackle",
+	"bribe",
+	"finance",
+	"pay",
+	"edit",
+	"implement",
+	"institute",
+	"remove",
+	"provide foreign aid to",
+	"leave",
+	"abandon",
+	"uphold",
+	"overturn",
+	"halt all",
+	"stop using",
+	"deny the existence of",
+	"bury",
+	"buy",
+	"excommunicate",
+	"defend their village from",
+	"declare war against",
+	"build",
+	"fund the creation of",
+}
+
+var settings = {
+	"after the fall of the Berlin Wall"
+	"in Hitler's bunker in 1945"
+}
+
+var caveats = {
+	"Everybody involved is drunk",
+	"This case takes place underwater",
+	"The world has been taken over by bees",
+	"Donald Trump is President",
+	"Bernie Sanders is President",
+	"Dominance reasoning suggest picking two boxes is the correct solution",
+	"A trolley is hurtling towards five innocent men",
+	"Fish does not count as meat",
+	"The Supreme Court was abolished five years ago",
+	"Everything will be the same either way",
+	"The world is exactly as it is except for the one factor that makes this case tight",
+	"Implementation is perfect",
+	"There will be no problems with implementation",
+	"All relevant parties agree to this",
+	"The UN supports this decision and all member nations have ratified it",
+}
+
+</script>
