@@ -17,10 +17,12 @@
 
 	<br>
 	<br>
+	<br>
+	<br>
 
 	<div id="generate">
 		<span id="button">
-			Make a case
+			MAKE YOUR CASE
 		</span>
 	</div>
 
@@ -47,8 +49,9 @@
 			startcase = timeSpace().concat(startcase);
 		else if (mod <= 2)
 			startcase = startcase.concat(caveat());
-		window.alert(startcase);
-		document.getElementById(statement).innerHTML = startcase;
+			
+		//window.alert(startcase);
+		document.getElementById("statement").innerHTML = startcase;
 	}
 
 	function standardCase() {
@@ -59,10 +62,10 @@
 		var subject = subjects[Math.floor(Math.random() * subjects.length)];
 
 		if(opChoice <= 1) {
-			thiscase = "Op choice: This house believes that " + String(actor) + " should " + String(verb) + " " + String(subject);
+			thiscase = "Op choice: This house believes that " + String(actor) + " should " + String(verb) + " " + String(subject) + ".";
 		}
 		else {
-			thiscase = "This house believes that " + String(actor) + " should " + String(verb) + " " + String(subject);
+			thiscase = "This house believes that " + String(actor) + " should " + String(verb) + " " + String(subject) + ".";
 		}
 
 		return thiscase;
@@ -76,11 +79,11 @@
 
 		if(opChoice <= 1) {
 			thiscase = "Op choice: Normatively speaking, we should " + String(verb)
-				+ " " + String(subject);
+				+ " " + String(subject) = ".";
 		}
 		else {
 			thiscase = "Normatively speaking, we should " + String(verb)
-				+ " " + String(subject);
+				+ " " + String(subject) + ".";
 		}
 
 		return thiscase;
@@ -90,7 +93,7 @@
 		var timestatement;
 		var setting = settings[Math.floor(Math.random() * settings.length)];
 
-		timestatement = "This is a time-space case set " + String(setting) + ".";
+		timestatement = "This is a time-space case set " + String(setting) + ". ";
 
 		return timestatement;
 	}
@@ -99,7 +102,7 @@
 		var thiscaveat;
 		var randomcaveat = caveats[Math.floor(Math.random() * caveats.length)];
 
-		thiscaveat = "Caveat: " + String(randomcaveat) + ".";
+		thiscaveat = " Caveat: " + String(randomcaveat) + ".";
 
 		return thiscaveat;
 	}
