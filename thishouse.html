@@ -57,12 +57,12 @@
 	function standardCase() {
 		var thiscase;
 		var opChoice = Math.random() * 5;
-		var actor = actors[Math.floor(Math.random() * actors.length)];
-		var verb = verbs[Math.floor(Math.random() * verbs.length)];
-		var subject = subjects[Math.floor(Math.random() * subjects.length)];
+		var actor = actors[Math.floor((Math.random() * actors.length)+1)];
+		var verb = verbs[Math.floor((Math.random() * verbs.length)+1)];
+		var subject = subjects[Math.floor((Math.random() * subjects.length)+1)];
 
 		if(opChoice <= 1) {
-			thiscase = "Op choice: This house believes that " + String(actor) + " should " + String(verb) + " " + String(subject) + ".";
+			thiscase = "Opp choice: This house believes that " + String(actor) + " should " + String(verb) + " " + String(subject) + ".";
 		}
 		else {
 			thiscase = "This house believes that " + String(actor) + " should " + String(verb) + " " + String(subject) + ".";
@@ -74,11 +74,11 @@
 	function normativeCase() {
 		var thiscase;
 		var opChoice = Math.random() * 5;
-		var verb = verbs[Math.floor(Math.random() * verbs.length)];
-		var subject = subjects[Math.floor(Math.random() * subjects.length)];
+		var verb = verbs[Math.floor((Math.random() * verbs.length)+1)];
+		var subject = subjects[Math.floor((Math.random() * subjects.length)+1)];
 
 		if(opChoice <= 1) {
-			thiscase = "Op choice: Normatively speaking, we should " + String(verb)
+			thiscase = "Opp choice: Normatively speaking, we should " + String(verb)
 				+ " " + String(subject) + ".";
 		}
 		else {
@@ -91,7 +91,7 @@
 
 	function timeSpace() {
 		var timestatement;
-		var setting = settings[Math.floor(Math.random() * settings.length)];
+		var setting = settings[Math.floor((Math.random() * settings.length)+1)];
 
 		timestatement = "This is a time-space case set " + String(setting) + ". ";
 
@@ -108,7 +108,7 @@
 	}
 
 var actors = [
-	"The Federal Reserve",
+	"the Federal Reserve",
 	"the embodiment of the American people",
 	"lawyers",
 	"doctors",
@@ -136,6 +136,7 @@ var actors = [
 	"the UN",
 	"the feminist movement",
 	"the LGBTQ rights movement",
+	"Black Lives Matter"
 	"President Obama",
 	"Hillary Clinton",
 	"Donald Trump",
@@ -152,7 +153,7 @@ var actors = [
 ]
 
 var subjects = [
-	"The Federal Reserve",
+	"the Federal Reserve",
 	"the embodiment of the American people",
 	"lawyers",
 	"doctors",
@@ -180,6 +181,7 @@ var subjects = [
 	"the UN",
 	"the feminist movement",
 	"the LGBTQ rights movement",
+	"Black Lives Matter"
 	"President Obama",
 	"Hillary Clinton",
 	"Donald Trump",
@@ -215,11 +217,11 @@ var subjects = [
 	"the Death Star",
 	"gun control laws",
 	"abortion",
-
+	"Batman",
 ]
 
 var verbs = [
-	"wholheartedly support",
+	"wholeheartedly support",
 	"ban", 
 	"kill", 
 	"get rid of", 
@@ -245,7 +247,7 @@ var verbs = [
 	"abandon",
 	"uphold",
 	"overturn",
-	"halt all",
+	"suspend",
 	"stop using",
 	"deny the existence of",
 	"bury",
@@ -260,6 +262,9 @@ var verbs = [
 var settings = [
 	"after the fall of the Berlin Wall",
 	"in Hitler's bunker in 1945",
+	"in the Marvel Cinematic Universe",
+	"at Hogwarts",
+	
 ]
 
 var caveats = [
@@ -278,6 +283,8 @@ var caveats = [
 	"There will be no problems with implementation",
 	"All relevant parties agree to this",
 	"The UN supports this decision and all member nations have ratified it",
+	"You are a plane in the world of the Pixar movie Cars",
+	
 ]
 
 	</script>
