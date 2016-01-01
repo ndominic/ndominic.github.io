@@ -44,11 +44,11 @@
 			startcase = normativeCase();
 
 		if(mod <= 1)
-			endcase = timeSpace().concat(startcase);
+			startcase = timeSpace().concat(startcase);
 		else if (mod <= 2)
-			endcase = startcase.concat(caveat());
+			startcase = startcase.concat(caveat());
 
-		document.getElementById(statement).innerHTML = endcase;
+		document.getElementById(statement).innerHTML = startcase;
 	}
 
 	function standardCase() {
