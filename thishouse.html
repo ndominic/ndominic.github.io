@@ -38,7 +38,7 @@
 		var type = Math.random() * 5;
 		var mod = Math.random() * 5;
 
-		if(type <= 3)
+		if(type <= 4)
 			startcase = standardCase();
 		/*else if (type <=  4) 
 			startcase = opChoice();*/
@@ -57,9 +57,9 @@
 	function standardCase() {
 		var thiscase;
 		var opChoice = Math.random() * 5;
-		var actor = actors[Math.floor((Math.random() * actors.length)+1)];
-		var verb = verbs[Math.floor((Math.random() * verbs.length)+1)];
-		var subject = subjects[Math.floor((Math.random() * subjects.length)+1)];
+		var actor = actors[Math.floor(Math.random() * (actors.length+1))];
+		var verb = verbs[Math.floor(Math.random() * (verbs.length+1))];
+		var subject = subjects[Math.floor(Math.random() * (subjects.length+1))];
 
 		if(opChoice <= 1) {
 			thiscase = "Opp choice: This house believes that " + String(actor) + " should " + String(verb) + " " + String(subject) + ".";
@@ -74,15 +74,20 @@
 	function normativeCase() {
 		var thiscase;
 		var opChoice = Math.random() * 5;
-		var verb = verbs[Math.floor((Math.random() * verbs.length)+1)];
-		var subject = subjects[Math.floor((Math.random() * subjects.length)+1)];
+		var version = Math.random() * 4;
+		var verb = verbs[Math.floor(Math.random() * (verbs.length+1))];
+		var subject = subjects[Math.floor(Math.random() * (subjects.length+1))];
 
 		if(opChoice <= 1) {
 			thiscase = "Opp choice: Normatively speaking, we should " + String(verb)
 				+ " " + String(subject) + ".";
 		}
+		else if (version <= 1) {
+			thiscase = "This house would " + String(verb) + " " + String(subject) 
+				+ ". This is a normative case."
+		}
 		else {
-			thiscase = "Normatively speaking, we should " + String(verb)
+			thiscase = "Normatively, we should " + String(verb)
 				+ " " + String(subject) + ".";
 		}
 
@@ -91,7 +96,7 @@
 
 	function timeSpace() {
 		var timestatement;
-		var setting = settings[Math.floor((Math.random() * settings.length)+1)];
+		var setting = settings[Math.floor(Math.random() * (settings.length+1))];
 
 		timestatement = "This is a time-space case set " + String(setting) + ". ";
 
@@ -100,7 +105,7 @@
 
 	function caveat() {
 		var thiscaveat;
-		var randomcaveat = caveats[Math.floor(Math.random() * caveats.length)];
+		var randomcaveat = caveats[Math.floor(Math.random() * (caveats.length+1))];
 
 		thiscaveat = " Caveat: " + String(randomcaveat) + ".";
 
@@ -136,7 +141,7 @@ var actors = [
 	"the UN",
 	"the feminist movement",
 	"the LGBTQ rights movement",
-	"Black Lives Matter"
+	"Black Lives Matter",
 	"President Obama",
 	"Hillary Clinton",
 	"Donald Trump",
@@ -218,6 +223,18 @@ var subjects = [
 	"gun control laws",
 	"abortion",
 	"Batman",
+	"communism",
+	"socialism",
+	"capitalism",
+	"feminism",
+	"progressivism",
+	"social Darwinism",
+	"the First Amendment",
+	"the Second Amendment",
+	"the Third Amendment",
+	"the Fifth Amendment",
+	"the 17th Amendment",
+	"the 21st Amendment",
 ]
 
 var verbs = [
@@ -257,14 +274,31 @@ var verbs = [
 	"declare war against",
 	"build",
 	"fund the creation of",
+	"enforce",
 ]
 
 var settings = [
 	"after the fall of the Berlin Wall",
 	"in Hitler's bunker in 1945",
-	"in the Marvel Cinematic Universe",
-	"at Hogwarts",
-	
+	"in the current Marvel Cinematic Universe",
+	"at Hogwarts during Harry Potter's third year",
+	"in an isolated rural village somewhere in Venezuela",
+	"in Spain under Franco",
+	"on the Moon immediately after Neil Armstrong has landed",
+	"in Northern Ireland during the Troubles",
+	"in the year 2165",
+	"in the year 1965",
+	"in the year 1543",
+	"in the year 1856",
+	"some time during one of the World Wars",
+	"immediately after Mount Vesuvius has erupted",
+	"during Woodstock",
+	"five minutes ago",
+	"ten minutes from now",
+	"on the East Coast of the United States during early 2016",
+	"in a world where this case is tight but also has an unbeatable tight block"
+	"in Westeros before Ned dies"
+	"the world of Star Wars immediately after the events of Episode VII"
 ]
 
 var caveats = [
@@ -273,8 +307,8 @@ var caveats = [
 	"The world has been taken over by bees",
 	"Donald Trump is President",
 	"Bernie Sanders is President",
-	"Dominance reasoning suggest picking two boxes is the correct solution",
-	"A trolley is hurtling towards five innocent men",
+	"Dominance reasoning suggests picking two boxes is the correct solution",
+	"A runaway trolley is currently hurtling towards five innocent men",
 	"Fish does not count as meat",
 	"The Supreme Court was abolished five years ago",
 	"Everything will be the same either way",
@@ -284,6 +318,7 @@ var caveats = [
 	"All relevant parties agree to this",
 	"The UN supports this decision and all member nations have ratified it",
 	"You are a plane in the world of the Pixar movie Cars",
+	"This case is tight as fuck",
 	
 ]
 
