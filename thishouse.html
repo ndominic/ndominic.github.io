@@ -57,9 +57,9 @@
 	function standardCase() {
 		var thiscase;
 		var opChoice = Math.random() * 5;
-		var actor = actors[Math.floor(Math.random() * (actors.length+1))];
-		var verb = verbs[Math.floor(Math.random() * (verbs.length+1))];
-		var subject = subjects[Math.floor(Math.random() * (subjects.length+1))];
+		var actor = actors[Math.floor(Math.random() * actors.length)];
+		var verb = verbs[Math.floor(Math.random() * verbs.length)];
+		var subject = subjects[Math.floor(Math.random() * subjects.length)];
 
 		if(opChoice <= 1) {
 			thiscase = "Opp choice: This house believes that " + String(actor) + " should " + String(verb) + " " + String(subject) + ".";
@@ -75,8 +75,8 @@
 		var thiscase;
 		var opChoice = Math.random() * 5;
 		var version = Math.random() * 4;
-		var verb = verbs[Math.floor(Math.random() * (verbs.length+1))];
-		var subject = subjects[Math.floor(Math.random() * (subjects.length+1))];
+		var verb = verbs[Math.floor(Math.random() * verbs.length)];
+		var subject = subjects[Math.floor(Math.random() * subjects.length)];
 
 		if(opChoice <= 1) {
 			thiscase = "Opp choice: Normatively speaking, we should " + String(verb)
@@ -96,7 +96,7 @@
 
 	function timeSpace() {
 		var timestatement;
-		var setting = settings[Math.floor(Math.random() * (settings.length+1))];
+		var setting = settings[Math.floor(Math.random() * settings.length)];
 
 		timestatement = "This is a time-space case set " + String(setting) + ". ";
 
@@ -105,7 +105,7 @@
 
 	function caveat() {
 		var thiscaveat;
-		var randomcaveat = caveats[Math.floor(Math.random() * (caveats.length+1))];
+		var randomcaveat = caveats[Math.floor(Math.random() * caveats.length)];
 
 		thiscaveat = " Caveat: " + String(randomcaveat) + ".";
 
