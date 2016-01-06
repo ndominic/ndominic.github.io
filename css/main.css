@@ -1,43 +1,22 @@
 .nav {
-  background-color: #0066CC;
-  position: fixed;
+	background-color: blue;
+
 }
 
-.nav .container {
-  position: relative;
-  top: 25px;
+.nav li {
+	display: inline;
 }
 
-.nav .logo a {
-  float:left;
-  margin-left: 50px;
-  color: white;
-  font-weight: bold;
-  font-family: Helvetica, sans-serif;
-  text-decoration: none;
-  font-size: 25px;
-  display: inline;
+.jumbotron #cover {
+	background-image:url('http://upload.wikimedia.org/wikipedia/commons/f/ff/Domestic_goat_kid_in_capeweed.jpg');
+  	height: 750px;
+  	background-repeat: no-repeat;
+  	background-size: cover;
 }
 
-.nav .navbar {
-  float: right;
-  margin-right: 50px;
-  display: inline;
+.jumbotron #about {
+	background-image:url('http://upload.wikimedia.org/wikipedia/commons/f/ff/Domestic_goat_kid_in_capeweed.jpg');
+  	height: 750px;
+  	background-repeat: no-repeat;
+  	background-size: cover;
 }
-
-.nav .navbar li {
-  display: inline;
-  margin-right: 50px;
-}
-
-.nav .navbar a {
-  color: #666699;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: 18px;
-}
-  
-  
-  
-  
