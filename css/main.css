@@ -7,7 +7,7 @@
 	display: inline;
 }
 
-.jumbotron #cover {
+.jumbotron {
 	background-image:url('http://upload.wikimedia.org/wikipedia/commons/f/ff/Domestic_goat_kid_in_capeweed.jpg');
   	height: 750px;
   	background-repeat: no-repeat;
