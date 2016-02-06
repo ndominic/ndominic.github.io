@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>TBD: An Educational Game</title>
+	<link rel="stylesheet" href="game.css"/>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="ace.js" type="text/javascript" charset="utf-8"></script>
+</head>
+
+<body>
+
+	<div id="canvas-container">
+		<canvas id="canvas" width="810" height="810"> </canvas>
+	</div>
+
+	<img src="space.gif" id="wallpic" hidden>
+	<img src="player.jpg" id="playerpic" hidden>
+	<img src="flag.png" id="flagpic" hidden>
+	<img src="white.png" id="whitepic" hidden>
+	<img src="planet.jpg" id="planetpic" hidden>
+	<img src="rocket.png" id="rocketpic" hidden>
+
+	<div id="editor">
+		/*Welcome to TBD: An Educational Game!
+			This is a game designed to teach basic programming functions. 
+			To move your spaceship, use the following commands:
+				this.moveRight(); = one space to the right
+				this.moveLeft(); = one space to the left
+				this.moveUp(); = one space up
+				this.moveDown(); = one space down
+			Try to reach the planet at the end of the path!
+
+			Pro-tip: more advanced users can try automating the process 
+			with this.rightClear(); and this.upClear();! */
+	</div>
+
+	<script>
+	    var editor = ace.edit("editor");
+	    //editor.setTheme("ace/theme/monokai");
+	    //editor.getSession().setMode("ace/mode/javascript");
+	</script>
+
+	<div id="submit-button">
+		<h3>Submit</h3>
+	</div>
+
+	<div id="reset-button">
+		<h3 id="level-state">level1</h3>
+	</div>
+
+	<script src="levels.js"></script>
+	<script src="map.js"></script>
+	<script src="thegame.js"></script>
+	<script src="UI.js"></script>
+</body>
+
+</HTML>
