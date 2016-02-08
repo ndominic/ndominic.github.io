@@ -3,6 +3,12 @@ body {
 	text-align: center;
 }
 
+#background {
+	height: 100%;
+	width: 100%;
+	background-image: url("http://weai.columbia.edu/wp-content/uploads/2015/11/columbiacampus1.jpg");
+}
+
 #case {
 	margin-right: auto;
 	margin-left: auto;
