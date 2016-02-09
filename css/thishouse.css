@@ -16,7 +16,7 @@ body {
 	z-index: 1;
 }
 
-#container {
+#blur {
 	position: fixed;
 	padding: 0;
 	z-index: 2;
@@ -25,7 +25,20 @@ body {
 	margin-left: 15%;
 	margin-right: 15%;
 	margin-top: 5%;
+	-webkit-filter: blur(2px);
 	background: rgba(102,102,102,.40);
+}
+
+#container {
+	position: fixed;
+	padding: 0;
+	z-index: 3;
+	height: 50%;
+	width: 70%;
+	margin-left: 15%;
+	margin-right: 15%;
+	margin-top: 5%;
+	background: rgba(102,102,102,0.1);
 	/*-webkit-filter: blur(1px);*/
 }
 
