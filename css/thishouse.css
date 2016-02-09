@@ -5,36 +5,38 @@ body {
 
 #background {
 	position: fixed;
-	background-size: cover;
 	padding: 0;
 	margin: 0;
 	top: 0;
 	left: 0;
+	width: 100%;
+	height: 100%;
 	background-image: url("http://static1.squarespace.com/static/540d1865e4b091e569d68f16/t/540d1dede4b034ea940ce0c3/1410145775478/columbia.jpg?format=2500w");
-	-webkit-filter: grayscale(100%);
-	filter: grayscale(100%);
+	-webkit-filter: grayscale(100%) blur(1px);
 	z-index: 1;
 }
 
 #container {
 	position: fixed;
-	margin-right: auto;
-	margin-left: auto;
-	margin-top: 10%;
-	margin-bottom: 45%;
-	color: #666666;
-	/*opacity: 100%;*/
+	padding: 0;
 	z-index: 2;
+	height: 50%;
+	width: 70%;
+	margin-left: 15%;
+	margin-right: 15%;
+	margin-top: 5%;
+	background: rgba(102,102,102,.40);
+	/*-webkit-filter: blur(1px);*/
 }
 
 #case {
+	padding: 10px;
 	margin-right: auto;
 	margin-left: auto;
 	margin-top: 15%;
 	font-size: 75px;
-	font-style: italic;
 	text-align: center;
-	color: black;
+	color: white;
 	font-size: 30px;
 }
 
