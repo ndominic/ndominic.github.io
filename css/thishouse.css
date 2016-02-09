@@ -12,6 +12,10 @@ body {
 	width: 100%;
 	height: 100%;
 	background-image: url("http://static1.squarespace.com/static/540d1865e4b091e569d68f16/t/540d1dede4b034ea940ce0c3/1410145775478/columbia.jpg?format=2500w");
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
 	background-repeat: no-repeat;
     	background-attachment: fixed;
 	background-position: center;
