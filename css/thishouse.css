@@ -20,7 +20,7 @@ body {
 	position: fixed;
 	padding: 0;
 	z-index: 2;
-	height: 50%;
+	height: 60%;
 	width: 70%;
 	margin-left: 15%;
 	margin-right: 15%;
@@ -33,17 +33,20 @@ body {
 	position: fixed;
 	padding: 0;
 	z-index: 3;
-	height: 50%;
+	height: 60%;
 	width: 70%;
 	margin-left: 15%;
 	margin-right: 15%;
 	margin-top: 5%;
-	background: rgba(102,102,102,0.1);
-	/*-webkit-filter: blur(1px);*/
+	background: rgba(102,102,102,0.3);
 }
 
 #case {
-	padding: 10px;
+	position: relative;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 700;
+	padding-left: 15px;
+	padding-right: 15px;
 	margin-right: auto;
 	margin-left: auto;
 	margin-top: 15%;
@@ -54,6 +57,9 @@ body {
 }
 
 #generate {
+	position: relative;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 700;
 	margin-left: auto;
 	margin-right: auto;
 	background-color: #5cd65c;
@@ -66,8 +72,7 @@ body {
 	border: none;
 	vertical-align: middle;
 	line-height: 40px;
-	-webkit-transition: color .75s
-	transition: color .75s;
+	transition: all .25s;
 }
 
 #generate:hover {
